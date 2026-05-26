@@ -1,27 +1,29 @@
-# 🧠 KSR Prompt Repo
+# 🧠 KSR AI Prompts, Tools & Skills
 
-A personal collection of reusable **AI prompts, tools, and skills** for Claude Code and other AI development workflows.
+A collection of **reusable, project-agnostic building blocks** for working efficiently with AI coding tools (Claude Code and friends). Everything here is a **template** — fill in the `[SQUARE_BRACKET]` placeholders and drop it into your own project.
 
-## 📦 Contents
+> 🎯 **Goal:** give anyone a clean starting point to set up a proper, scalable AI-assisted development system — instead of wiring it up from scratch every time.
 
-### 🏗️ [claude_md_organizer.md](claude_md_organizer.md)
+## 📦 Modules
 
-A prompt that analyzes an existing `.claude/CLAUDE.md` setup and refactors it into a scalable, modular Claude Code "operating system" — splitting responsibilities across `rules/`, `commands/`, `workflows/`, `templates/`, `context/`, `checklists/`, `prompts/`, and `memory/`. Optimized for long-term autonomous development, MCP integrations, and Trello automation.
+| Module | What it gives you |
+|---|---|
+| 🏗️ [claude-operating-system/](claude-operating-system/) | A complete, modular Claude Code "operating system" — a root `CLAUDE.md` orchestrator plus a `.claude/` tree of rules, commands, workflows, templates, context, checklists, prompts, memory, and skills. **Stack-agnostic**, driven by placeholders. |
+| 🪄 [claude-md-organizer/](claude-md-organizer/) | A prompt that takes an existing, messy `CLAUDE.md` and **refactors it into the modular structure above**. Use it to generate or reorganize your own operating system. |
+| 📋 [trello-manager/](trello-manager/) | A lightweight, drop-in rule + MCP config that lets Claude keep a **Trello board** synchronized with your development, phase by phase. |
 
-### 📋 [trello_manager_with_claude/](trello_manager_with_claude/)
+## 🚀 Getting started
 
-A setup for letting Claude keep a **Trello board** synchronized with your development work, phase by phase.
+### 🏗️ Want a full AI operating system for your project?
+Go to [claude-operating-system/](claude-operating-system/). Copy `CLAUDE.md` and the `.claude/` folder into your project root, then find-and-replace the placeholders listed in [claude-operating-system/PLACEHOLDERS.md](claude-operating-system/PLACEHOLDERS.md).
 
-| File | Purpose |
-| --- | --- |
-| 🗂️ [trello_manager.md](trello_manager_with_claude/trello_manager.md) | Trello project-management rules — card creation, naming, labels, checklists, and status flow (Backlog → In Progress → In Review). |
-| ⚙️ [.mcp.json](trello_manager_with_claude/.mcp.json) | MCP server configuration for the Trello integration. |
-| 📖 [README.md](trello_manager_with_claude/README.md) | Full setup instructions. |
+### 🪄 Already have a `CLAUDE.md` you want to clean up?
+Use the prompt in [claude-md-organizer/](claude-md-organizer/) to refactor it into the modular layout.
 
-**🚀 Quick start:**
+### 📋 Just want Trello kept in sync?
+Use [trello-manager/](trello-manager/) on its own — no full operating system required.
 
-1. 🔌 Place [.mcp.json](trello_manager_with_claude/.mcp.json) in your project root, then run and authenticate the MCP server.
-2. 🗂️ Put [trello_manager.md](trello_manager_with_claude/trello_manager.md) in your `.claude/rules/` folder and reference it from `CLAUDE.md`.
-3. 🎯 Set your board name and project name (the card title prefix), and optionally adjust the card flow (Backlog → In Progress → In Review).
-4. 🛠️ Run your development phase by phase — Claude will keep the board updated as it works.
+## 🔤 The placeholder convention
+
+Every project-specific value is written as `[SQUARE_BRACKETS]` — e.g. `[PROJECT_NAME]`, `[FRAMEWORK]`, `[BOARD_NAME]`. Find-and-replace them to adapt a module to your project. Anything still bracketed after setup is something you still need to fill in. The operating system ships a full reference at [claude-operating-system/PLACEHOLDERS.md](claude-operating-system/PLACEHOLDERS.md).
 </content>

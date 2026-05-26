@@ -1,0 +1,12 @@
+{
+  "//": "Example permission allowlist — replace with the commands your project actually uses. See ../PLACEHOLDERS.md.",
+  "permissions": {
+    "allow": [
+      "Bash([PACKAGE_MANAGER] install *)",
+      "Bash([BUILD_CMD])",
+      "Bash([LINT_CMD])",
+      "Bash([TYPECHECK_CMD])",
+      "Bash([TEST_CMD])"
+    ]
+  }
+}

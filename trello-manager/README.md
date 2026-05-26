@@ -41,12 +41,11 @@ Copy [trello_manager.md](trello_manager.md) into your project's `.claude/rules/`
 
 ### 3️⃣ Configure your board & project
 
-In [trello_manager.md](trello_manager.md), set:
+[trello_manager.md](trello_manager.md) uses `[SQUARE_BRACKET]` placeholders. Find-and-replace them with your values:
 
-- 🎯 **Board name** — the Trello board to manage
-- 🏷️ **Project name** — used as the prefix for every card title
-
-If needed, adjust the card flow (**Backlog → In Progress → In Review**) to match your board's lists.
+- 🎯 `[BOARD_NAME]` — the Trello board to manage
+- 🏷️ `[CARD_PREFIX]` — the prefix added to every card title (e.g. `Acme `)
+- 🔄 `[BACKLOG_LIST]` / `[IN_PROGRESS_LIST]` / `[REVIEW_LIST]` — your board's column/list names (defaults: Backlog → In Progress → Review)
 
 ### 4️⃣ Develop phase by phase
 
@@ -57,4 +56,3 @@ Run your development work as usual. Claude will keep the board in sync — creat
 - 🔌 Claude verifies the MCP connection before any Trello action and will notify you if it's unavailable.
 - 🛑 Cards are never moved beyond **Review** and are never archived automatically.
 - 🚫 Existing cards are updated instead of creating duplicates.
-</content>
